@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Доступы и локальные настройки
+.env
+
+# Сгенерированные отчёты и большие выгрузки
+reports/
+data/raw/
+
+# Служебные файлы систем и редакторов
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
