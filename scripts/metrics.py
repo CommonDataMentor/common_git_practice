@@ -28,3 +28,11 @@ def cancel_rate(orders: list[dict]) -> float:
         return 0.0
     cancelled = sum(1 for o in orders if o["status"] == "cancelled")
     return round(cancelled / len(orders) * 100, 2)
+
+
+def aov(orders: list[dict]) -> float:
+    """Средний чек (AOV): GMV / число успешных заказов."""
+    success = [o for o in orders if is_success(o)]
+    if not success:
+        return 0.0
+    return round(gmv(success) / len(success), 2)
