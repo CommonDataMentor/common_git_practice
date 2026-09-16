@@ -11,7 +11,7 @@ SELECT
     count(*)                        AS orders,
     count(DISTINCT o.user_id)       AS buyers,
     sum(o.total_amount)             AS gmv,
-    round(avg(o.total_amount), 2)   AS avg_check
+    round(avg(o.total_amount))      AS avg_check
 FROM ecom_data.orders o
 WHERE o.created_at >= current_date - interval '30 days'
   AND o.created_at < current_date
