@@ -15,5 +15,5 @@ SELECT
 FROM ecom_data.orders o
 WHERE o.created_at >= current_date - interval '30 days'
   AND o.created_at < current_date
-  AND o.status IN ('paid', 'shipped', 'delivered')
+  AND o.status <> 'created'
 GROUP BY o.created_at::date;
