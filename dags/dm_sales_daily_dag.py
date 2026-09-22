@@ -12,7 +12,7 @@ with DAG(
     dag_id="analytics__dm_sales_daily",
     description="Витрина продаж по дням: полный пересчёт за последние 30 дней",
     start_date=datetime(2026, 9, 1),
-    schedule="@daily",
+    schedule="0 3 * * *",  # 03:00 UTC = 06:00 по Москве, когда заказы за вчера уже выгружены
     catchup=False,
     max_active_runs=1,
     template_searchpath=["/opt/airflow/repo/sql/marts"],
