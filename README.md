@@ -23,6 +23,7 @@
 | `dm_active_users_daily` | DAU по устройствам | `sessions` | ежедневно |
 | `dm_funnel_daily` | воронка: просмотр → корзина → оформление → покупка | `events` | ежедневно |
 | `dm_retention_cohorts` | retention месячных когорт по успешным заказам | `users`, `orders` | еженедельно |
+| `dm_category_sales_daily` | заказы, товары и сумма позиций по категориям | `orders`, `order_items`, `products` | ежедневно |
 
 Все метрики считаются по определениям из [docs/metrics.md](docs/metrics.md).
 
